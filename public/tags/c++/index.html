@@ -144,6 +144,55 @@
 
 <article class="post-entry tag-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">cs144-lab3
+      <span class="entry-hint" title="Draft">
+        <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" fill="currentColor">
+          <path
+            d="M160-410v-60h300v60H160Zm0-165v-60h470v60H160Zm0-165v-60h470v60H160Zm360 580v-123l221-220q9-9 20-13t22-4q12 0 23 4.5t20 13.5l37 37q9 9 13 20t4 22q0 11-4.5 22.5T862.09-380L643-160H520Zm300-263-37-37 37 37ZM580-220h38l121-122-18-19-19-18-122 121v38Zm141-141-19-18 37 37-18-19Z" />
+        </svg>
+      </span>
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>TCP Sender Class TCP Sender Responsibility,
+• Keep track of the receiver’s window (receiving incoming TCPReceiverMessages with their acknos and window sizes) • Fill the window when possible, by reading from the ByteStream, creating new TCP segments (including SYN and FIN flags if needed), and sending them. The sender should keep sending segments until either the window is full or the outbound ByteStream has nothing more to send. while loop • Keep track of which segments have been sent but not yet acknowledged by the receiver— we call these “outstanding” segments . outstanding segments • Re-send outstanding segments if enough time passes since they were sent, and they haven’t been acknowledged yet. timer class design
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-03-22 20:17:00 +0800 CST'>March 22, 2025</span>&nbsp;·&nbsp;4 min&nbsp;·&nbsp;653 words&nbsp;·&nbsp;zyy</footer>
+  <a class="entry-link" aria-label="post link to cs144-lab3" href="http://localhost:1313/posts/cs144/lab3/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">cs144-lab2
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Outline of TCPreceiver From the lab0, and lab1 we have implemented the ByteStream and Reassembler, in this lab2, I am gonna implement TCPreceiver.
+First of all, we have to illustrate , in TCP (transmition control protocol), there may be many cases of the packets sent by the tcp peer of sender(versus the contrary). For example, there may be lost, altered, reordered, duplicated. And the TCP protocol was designed to handle these cases , so did I.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-03-22 20:11:00 +0800 CST'>March 22, 2025</span>&nbsp;·&nbsp;7 min&nbsp;·&nbsp;1279 words&nbsp;·&nbsp;zyy</footer>
+  <a class="entry-link" aria-label="post link to cs144-lab2" href="http://localhost:1313/posts/cs144/lab2/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">cs144-lab1
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Overview Course Learn operations idempotency meaning:
+Idempotency is a property of certain operations or API requests that ensures performing the operation multiple times yields the same result as if it were executed only once. (GET PUT) And the result we expect is result form not result value.
+A non-idempotent operation, on the other hand, changes the state with each execution, meaning that subsequent calls with the same input can yield different results. This is crucial to recognize because it can lead to unintended side effects when such operations are repeated. (POST)
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-03-22 19:59:00 +0800 CST'>March 22, 2025</span>&nbsp;·&nbsp;6 min&nbsp;·&nbsp;1165 words&nbsp;·&nbsp;zyy</footer>
+  <a class="entry-link" aria-label="post link to cs144-lab1" href="http://localhost:1313/posts/cs144/lab1/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">cs144-lab0
     </h2>
   </header>
@@ -153,7 +202,7 @@
 ...</p>
   </div>
   <footer class="entry-footer"><span title='2025-03-21 15:58:00 +0800 CST'>March 21, 2025</span>&nbsp;·&nbsp;7 min&nbsp;·&nbsp;1485 words&nbsp;·&nbsp;zyy</footer>
-  <a class="entry-link" aria-label="post link to cs144-lab0" href="http://localhost:1313/posts/lab0/"></a>
+  <a class="entry-link" aria-label="post link to cs144-lab0" href="http://localhost:1313/posts/cs144/lab0/"></a>
 </article>
     </main>
     

@@ -6,13 +6,52 @@
     <description>Recent content in Net on My New Hugo Site</description>
     <generator>Hugo -- 0.145.0</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 21 Mar 2025 15:58:00 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 22 Mar 2025 20:17:00 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/categories/net/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>cs144-lab3</title>
+      <link>http://localhost:1313/posts/cs144/lab3/</link>
+      <pubDate>Sat, 22 Mar 2025 20:17:00 +0800</pubDate>
+      <guid>http://localhost:1313/posts/cs144/lab3/</guid>
+      <description>&lt;h2 id=&#34;tcp-sender-class&#34;&gt;TCP Sender Class&lt;/h2&gt;
+&lt;p&gt;TCP  Sender Responsibility,&lt;/p&gt;
+&lt;p&gt;• Keep track of the receiver’s window (receiving incoming TCPReceiverMessages with
+their acknos and window sizes)
+• Fill the window when possible, by reading from the ByteStream, creating new TCP
+segments (including SYN and FIN flags if needed), and sending them. The sender should
+keep sending segments until either the window is full or the outbound ByteStream has
+nothing more to send. &lt;strong&gt;while loop&lt;/strong&gt;
+• Keep track of which segments have been sent but not yet acknowledged by the receiver—
+we call these “outstanding” segments . &lt;strong&gt;outstanding segments&lt;/strong&gt;
+• Re-send outstanding segments if enough time passes since they were sent, and they
+haven’t been acknowledged yet. &lt;strong&gt;timer class design&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>cs144-lab2</title>
+      <link>http://localhost:1313/posts/cs144/lab2/</link>
+      <pubDate>Sat, 22 Mar 2025 20:11:00 +0800</pubDate>
+      <guid>http://localhost:1313/posts/cs144/lab2/</guid>
+      <description>&lt;h2 id=&#34;outline-of-tcpreceiver&#34;&gt;Outline of TCPreceiver&lt;/h2&gt;
+&lt;p&gt;From the lab0, and lab1 we have implemented the ByteStream and Reassembler, in this lab2, I am gonna implement TCPreceiver.&lt;/p&gt;
+&lt;p&gt;First of all, we have to illustrate , in TCP (transmition control protocol), there may be many cases of the packets sent by the tcp peer of sender(versus the contrary). For example, there may be lost, altered, reordered, duplicated. And the TCP protocol was designed to handle these cases , so did I.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>cs144-lab1</title>
+      <link>http://localhost:1313/posts/cs144/lab1/</link>
+      <pubDate>Sat, 22 Mar 2025 19:59:00 +0800</pubDate>
+      <guid>http://localhost:1313/posts/cs144/lab1/</guid>
+      <description>&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
+&lt;h3 id=&#34;course-learn&#34;&gt;Course Learn&lt;/h3&gt;
+&lt;p&gt;operations idempotency meaning:&lt;/p&gt;
+&lt;p&gt;Idempotency is a property of certain operations or API requests that ensures performing the operation multiple times yields the same result as if it were executed only once. (GET PUT)
+And the result we expect is &lt;strong&gt;result form&lt;/strong&gt; not &lt;strong&gt;result value&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;A non-idempotent operation, on the other hand, changes the state with each execution, meaning that subsequent calls with the same input can yield different results. This is crucial to recognize because it can lead to unintended side effects when such operations are repeated. (POST)&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>cs144-lab0</title>
-      <link>http://localhost:1313/posts/lab0/</link>
+      <link>http://localhost:1313/posts/cs144/lab0/</link>
       <pubDate>Fri, 21 Mar 2025 15:58:00 +0800</pubDate>
-      <guid>http://localhost:1313/posts/lab0/</guid>
+      <guid>http://localhost:1313/posts/cs144/lab0/</guid>
       <description>&lt;h2 id=&#34;1-set-up-linux-environment&#34;&gt;1 Set up Linux environment&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;ubuntu 22.04&lt;/li&gt;
