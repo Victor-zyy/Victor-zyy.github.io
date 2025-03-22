@@ -1,0 +1,134 @@
+baseURL: https://example.org/
+languageCode: en-us
+title: My New Hugo Site
+theme: PaperMod
+
+
+
+params:
+  author: Victor
+  DateFormat: "January 2, 2006"
+
+params:
+  defaultTheme: auto # dark, light
+  disableThemeToggle: false
+
+  lazyLoad:
+    enabled: true
+    placeholder: /images/placeholder.png # 替换为你的占位符图片路径
+
+  codeHighlight:
+    enabled: true
+    style: monokai # 替换为你喜欢的代码高亮样式
+
+  search:
+    enabled: true
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON # 启用 JSON 输出
+
+params:
+  searchHidden: true
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    # limit: 10 # refer: https://www.fusejs.io/api/methods.html#search
+    keys: ["title", "permalink", "summary", "content"]
+
+params:
+  ShowCodeCopyButtons: false #code copy button
+  ShowWordCount: true
+  ShowBreadCrumbs: true #show breadCrumbs when you open a post like home<<posts etc.
+  ShowReadingTime: true #words time assuming
+  ShowShareButtons: true #share button below
+  ShowPostNavLinks: true #other posts suggestion below a post relative
+
+  tagCloud:
+    enabled: true
+    minFontSize: 12
+    maxFontSize: 24
+    unit: "px"
+    amount: 50
+
+  categoryCloud:
+    enabled: true
+    minFontSize: 12
+    maxFontSize: 24
+    unit: "px"
+    amount: 50
+
+  label:
+    text: "Home"
+    icon: /apple-touch-icon.png
+    iconHeight: 35
+  toc:
+    enabled: true
+
+
+  # profile-mode
+  profileMode:
+    enabled: false # needs to be explicitly set
+    title: ExampleSite
+    subtitle: "This is subtitle"
+    imageUrl: "<img location>"
+    imageWidth: 120
+    imageHeight: 120
+    imageTitle: my image
+    buttons:
+      - name: Posts
+        url: posts
+      - name: Tags
+        url: tags
+
+  # home-info mode
+  homeInfoParams:
+    Title: "Hi there \U0001F44B"
+    Content: Welcome to my blog! Here I share my thoughts on technology, programming, and life. Feel free to explore and leave a comment!
+  socialIcons:
+    - name: x
+      url: "https://x.com/"
+    - name: stackoverflow
+      url: "https://stackoverflow.com"
+    - name: github
+      url: "https://github.com/Victor-zyy"
+
+  cover:
+    linkFullImages: true #hyperlink when click on image on the cover
+    image: "/images/cover.jpg"
+    alt: "Cover Image"
+    caption: "This is a beautiful cover image!"
+
+markup:
+  tableOfContents:
+    startLevel: 2 # 从 H2 开始生成 TOC
+    endLevel: 3   # 到 H3 结束
+#name controls what will be displayed for the menu entry. url sets the URL that the entry points to. weight is used to control the positioning of entries.
+menu:
+  main:
+    - identifier: archive
+      name: Archive
+      url: /archives/
+      weight: 5   #sequence order low weight 
+    - identifier: categories
+      name: Categories
+      url: /categories/
+      weight: 10
+    - identifier: tags
+      name: Tags
+      url: /tags/
+      weight: 15
+    - identifier: search
+      name: Search
+      url: /search/
+      weight: 20
+    - identifier: example
+      name: example.org
+      url: https://example.org
+      weight: 30

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Css on My New Hugo Site</title>
+    <link>http://localhost:1313/tags/css/</link>
+    <description>Recent content in Css on My New Hugo Site</description>
+    <generator>Hugo -- 0.145.0</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 22 Mar 2025 15:27:27 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/css/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Second</title>
+      <link>http://localhost:1313/posts/second/</link>
+      <pubDate>Sat, 22 Mar 2025 15:27:27 +0800</pubDate>
+      <guid>http://localhost:1313/posts/second/</guid>
+      <description>&lt;h1 id=&#34;this-is-the-first-title&#34;&gt;This is the first title&lt;/h1&gt;
+&lt;p&gt;ubuntu linux
+zhandand&lt;/p&gt;
+&lt;h2 id=&#34;this-is-the-second-title&#34;&gt;This is the second title&lt;/h2&gt;
+&lt;p&gt;NonGNU ELPA - yaml-mode
+yaml-mode&lt;/p&gt;
+&lt;p&gt;Description
+Major mode for editing YAML files
+Latest
+yaml-mode-0.0.16.tar (.sig), 2024-Mar-31, 40.0 KiB
+Maintainer
+Vasilij Schneidermann &lt;a href=&#34;mailto:mail@vasilij.de&#34;&gt;mail@vasilij.de&lt;/a&gt;
+Atom feed
+yaml-mode.xml
+Website
+&lt;a href=&#34;https://github.com/yoshiki/yaml-mode&#34;&gt;https://github.com/yoshiki/yaml-mode&lt;/a&gt;
+Browse ELPA&amp;rsquo;s repository
+CGit or Gitweb
+Badge&lt;/p&gt;
+&lt;p&gt;To install this package from Emacs, use package-install or list-packages.
+Full description&lt;/p&gt;
+&lt;p&gt;RECRUITMENTS
+I have not used emacs and this library for a long time,
+so I recruit maintainers or collaborators for all yaml-mode users.
+If you are interested in maintaining or collaborating with this library,
+please contact me.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
