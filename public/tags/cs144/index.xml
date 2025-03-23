@@ -6,8 +6,18 @@
     <description>Recent content in Cs144 on My New Hugo Site</description>
     <generator>Hugo -- 0.145.0</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 22 Mar 2025 20:17:00 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 23 Mar 2025 15:25:00 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/cs144/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>cs144-lab4</title>
+      <link>http://localhost:1313/posts/cs144/lab4/</link>
+      <pubDate>Sun, 23 Mar 2025 15:25:00 +0800</pubDate>
+      <guid>http://localhost:1313/posts/cs144/lab4/</guid>
+      <description>&lt;h2 id=&#34;glue-of-cs144tcpsocket&#34;&gt;Glue of CS144TCPSocket&lt;/h2&gt;
+&lt;p&gt;I will illustrate the glue for using CS144TCPSocket in one image.
+&lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:1313/cs144/images/lab4_cs144_framework.png&#34;&gt;
+From the picture, we know that it&amp;rsquo;s our job to implement TCP/IP in user layer in this class. But how do our packets of network send to other computers through the internet ? The answer is to use tun/tap device under the linux kernel. The tun/tap device is kinda like a software net-card which tun device gives you raw IP packet and tap device gives you raw MAC dataframe. And follow the instructions of the tun.sh, setting the iptables to route makes our packet to go elsewhere.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>cs144-lab3</title>
       <link>http://localhost:1313/posts/cs144/lab3/</link>
