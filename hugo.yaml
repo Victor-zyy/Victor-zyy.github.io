@@ -24,6 +24,12 @@ params:
   search:
     enabled: true
 
+markup:
+  defaultMarkdownHandler: goldmark
+  goldmark:
+    renderer:
+      unsafe: true
+
 outputs:
   home:
     - HTML

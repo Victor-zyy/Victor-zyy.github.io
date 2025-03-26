@@ -145,7 +145,7 @@ From the picture, we know that it&rsquo;s our job to implement TCP/IP in user la
     <h1 class="post-title entry-hint-parent">
       cs144-lab4
     </h1>
-    <div class="post-meta"><span title='2025-03-23 15:25:00 +0800 CST'>March 23, 2025</span>&nbsp;·&nbsp;5 min&nbsp;·&nbsp;908 words&nbsp;·&nbsp;zyy
+    <div class="post-meta"><span title='2025-03-23 15:25:00 +0800 CST'>March 23, 2025</span>&nbsp;·&nbsp;5 min&nbsp;·&nbsp;936 words&nbsp;·&nbsp;zyy
 
 </div>
   </header> <div class="toc">
@@ -265,19 +265,33 @@ And when the packet is coming, the kernel will choose to route to write applicat
 <ul>
 <li>question 1: echo_reply_rate</li>
 </ul>
+<blockquote>
+<p>loss               :     115
+dup                :     41
+echo_receive_rate  :     0.9987992440458167</p></blockquote>
 <ul>
 <li>question 2: longest concecutive</li>
 </ul>
+<blockquote>
+<p>max_consecutive    :     8309</p></blockquote>
 <ul>
 <li>question 3: longest missing concecutive</li>
 </ul>
+<blockquote>
+<p>max_missing        :     8</p></blockquote>
 <ul>
 <li>question 4: independent or correlated</li>
 </ul>
+<blockquote>
+<p>N+1_reply_N_missing:     0.0006690501578540217
+N+1_reply_N_reply  :     0.999330949842146</p></blockquote>
 <p>From the result, we can see that it&rsquo;s not idependent.</p>
 <ul>
 <li>question 5/6: get minimum and maximum RTT</li>
 </ul>
+<blockquote>
+<p>min RTT            :     20.2
+max RTT            :     495</p></blockquote>
 <ul>
 <li>question 7: Make a graph of the RTT as a function of time. Label the x-axis with the actual time of day (covering the 2+-hour period), and the y-axis should be the number of milliseconds of RTT.</li>
 </ul>
@@ -318,6 +332,11 @@ I see but not clear that if this time RTT is large, maybe the second is small.</
       <li><a href="http://localhost:1313/tags/c&#43;&#43;/">C&#43;&#43;</a></li>
     </ul>
 <nav class="paginav">
+  <a class="prev" href="http://localhost:1313/posts/cs144/lab5/">
+    <span class="title">« Prev</span>
+    <br>
+    <span>cs144-lab5</span>
+  </a>
   <a class="next" href="http://localhost:1313/posts/cs144/lab3/">
     <span class="title">Next »</span>
     <br>

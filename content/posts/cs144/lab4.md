@@ -134,23 +134,29 @@ I collected for about 5 hours of data from 20250312 9:00:00 to 20250312 14:19:00
 
 -   question 1: echo_reply_rate
 
-<!--listend-->
+> loss               :     115
+> dup                :     41
+> echo_receive_rate  :     0.9987992440458167
 
 -   question 2: longest concecutive
 
-<!--listend-->
+> max_consecutive    :     8309
 
 -   question 3: longest missing concecutive
 
-<!--listend-->
+> max_missing        :     8
 
 -   question 4: independent or correlated
+
+> N+1_reply_N_missing:     0.0006690501578540217
+> N+1_reply_N_reply  :     0.999330949842146
 
 From the result, we can see that it's not idependent.
 
 -   question 5/6: get minimum and maximum RTT
 
-<!--listend-->
+> min RTT            :     20.2
+> max RTT            :     495
 
 -   question 7: Make a graph of the RTT as a function of time. Label the x-axis with the actual time of day (covering the 2+-hour period), and the y-axis should be the number of milliseconds of RTT.
 
