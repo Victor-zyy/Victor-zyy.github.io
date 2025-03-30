@@ -2,28 +2,70 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/posts/c&#43;&#43;_basic/1_ctor/</loc>
-    <lastmod>2025-03-30T10:09:00+08:00</lastmod>
+    <loc>http://localhost:1313/posts/c&#43;&#43;_basic/6_new_delete/</loc>
+    <lastmod>2025-03-30T14:28:00+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/c&#43;&#43;/</loc>
-    <lastmod>2025-03-30T10:09:00+08:00</lastmod>
+    <lastmod>2025-03-30T14:28:00+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/</loc>
-    <lastmod>2025-03-30T10:09:00+08:00</lastmod>
+    <lastmod>2025-03-30T14:28:00+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/language/</loc>
-    <lastmod>2025-03-30T10:09:00+08:00</lastmod>
+    <lastmod>2025-03-30T14:28:00+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2025-03-30T10:09:00+08:00</lastmod>
+    <lastmod>2025-03-30T14:28:00+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/object_oriented/</loc>
-    <lastmod>2025-03-30T10:09:00+08:00</lastmod>
+    <loc>http://localhost:1313/categories/object_model/</loc>
+    <lastmod>2025-03-30T14:28:00+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/</loc>
-    <lastmod>2025-03-30T10:09:00+08:00</lastmod>
+    <lastmod>2025-03-30T14:28:00+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2025-03-30T14:28:00+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/c&#43;&#43;_basic/5_object_model_virtual/</loc>
+    <lastmod>2025-03-30T14:27:00+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/c&#43;&#43;_basic/4_syntactic_sugar/</loc>
+    <lastmod>2025-03-30T14:26:00+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/c&#43;&#43;_basic/3_template/</loc>
+    <lastmod>2025-03-30T14:05:00+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/c&#43;&#43;_basic/2_special_classes/</loc>
+    <lastmod>2025-03-30T13:55:00+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/c&#43;&#43;_basic/1_explicit_typefunction/</loc>
+    <lastmod>2025-03-30T13:44:00+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/c&#43;&#43;_basic/8_virtual_polymorphism/</loc>
+    <lastmod>2025-03-30T11:58:00+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/object_oriented/</loc>
+    <lastmod>2025-03-30T11:58:00+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/c&#43;&#43;_basic/7_oop_ood/</loc>
+    <lastmod>2025-03-30T11:48:00+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/c&#43;&#43;_basic/6_complement/</loc>
+    <lastmod>2025-03-30T11:41:00+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/c&#43;&#43;_basic/5_new_delete/</loc>
+    <lastmod>2025-03-30T11:28:00+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/c&#43;&#43;_basic/4_big_three/</loc>
+    <lastmod>2025-03-30T11:15:00+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/c&#43;&#43;_basic/3_operator_overload_typeobject/</loc>
+    <lastmod>2025-03-30T11:06:00+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/c&#43;&#43;_basic/2_pass_and_return/</loc>
+    <lastmod>2025-03-30T10:48:00+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/c&#43;&#43;_basic/1_ctor/</loc>
     <lastmod>2025-03-30T10:09:00+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/cs144/</loc>

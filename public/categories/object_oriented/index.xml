@@ -6,8 +6,178 @@
     <description>Recent content in Object_oriented on My New Hugo Site</description>
     <generator>Hugo -- 0.145.0</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 30 Mar 2025 10:09:00 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 30 Mar 2025 11:58:00 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/categories/object_oriented/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>8-virtual-polymorphism-basic-object-oriented-cpp</title>
+      <link>http://localhost:1313/posts/c&#43;&#43;_basic/8_virtual_polymorphism/</link>
+      <pubDate>Sun, 30 Mar 2025 11:58:00 +0800</pubDate>
+      <guid>http://localhost:1313/posts/c&#43;&#43;_basic/8_virtual_polymorphism/</guid>
+      <description>&lt;h2 id=&#34;inheritance-with-virtual-function&#34;&gt;inheritance with virtual function&lt;/h2&gt;
+&lt;h3 id=&#34;virtual-function&#34;&gt;virtual function&lt;/h3&gt;
+&lt;p&gt;The inheritance with virtual function can make the most of it.
+The member function has three forms classified by &lt;strong&gt;virtual&lt;/strong&gt;. And the virtual function needs to be &lt;strong&gt;overriden&lt;/strong&gt; by derived class.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;non-virtual function (with no virtual identifier)&lt;/li&gt;
+&lt;li&gt;impure virtual function (with virtual identifier and default definition)&lt;/li&gt;
+&lt;li&gt;pure virtual (with virtual identifier, = 0)  // fixme&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Sometimes we need a default virtual function definition so impure is necessary.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>7-oop-ood-object-oriented-cpp</title>
+      <link>http://localhost:1313/posts/c&#43;&#43;_basic/7_oop_ood/</link>
+      <pubDate>Sun, 30 Mar 2025 11:48:00 +0800</pubDate>
+      <guid>http://localhost:1313/posts/c&#43;&#43;_basic/7_oop_ood/</guid>
+      <description>&lt;h2 id=&#34;oop-and-ood&#34;&gt;OOP and OOD&lt;/h2&gt;
+&lt;p&gt;object oriented programming, object oriented design
+We have three tools to design a good program, inheritance, composition, and delegation.&lt;/p&gt;
+&lt;h3 id=&#34;inheritance&#34;&gt;Inheritance&lt;/h3&gt;
+&lt;h4 id=&#34;is-a&#34;&gt;&lt;strong&gt;is-a&lt;/strong&gt;&lt;/h4&gt;
+&lt;p&gt;The public inheritance way is &amp;ldquo;is-a&amp;rdquo;, like person is a creature. dog is a animal. etc.&lt;/p&gt;
+&lt;h4 id=&#34;outline&#34;&gt;outline&lt;/h4&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:1313/c_plus_plus/images/7_inheritance.png&#34;&gt;
+The same outline as composition.&lt;/p&gt;
+&lt;h4 id=&#34;ctor-and-dtor&#34;&gt;ctor and dtor&lt;/h4&gt;
+&lt;p&gt;The order of calling ctor when construct the class is from inner to outter, the dtor is the opposite.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-c++&#34; data-lang=&#34;c++&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Derived&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;Derived(...) &lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; Base() {};
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Derived&lt;span style=&#34;color:#f92672&#34;&gt;::~&lt;/span&gt;Derived(...) &lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; {... &lt;span style=&#34;color:#f92672&#34;&gt;~&lt;/span&gt;Base();};
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Besides, the compiler will automatically add the ctor and dtor, if ctor does ease your tastes then you need to change you like.
+Note: the base dtor must using &lt;strong&gt;virtual&lt;/strong&gt; identifier, otherwise it will cause undefined behavior.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>6-complement-objcet-oriented-cpp</title>
+      <link>http://localhost:1313/posts/c&#43;&#43;_basic/6_complement/</link>
+      <pubDate>Sun, 30 Mar 2025 11:41:00 +0800</pubDate>
+      <guid>http://localhost:1313/posts/c&#43;&#43;_basic/6_complement/</guid>
+      <description>&lt;h2 id=&#34;static&#34;&gt;static&lt;/h2&gt;
+&lt;h3 id=&#34;static-member-data&#34;&gt;static member data&lt;/h3&gt;
+&lt;p&gt;only has one slice in memory, and need to be definition.&lt;/p&gt;
+&lt;h3 id=&#34;static-member-function&#34;&gt;static member function&lt;/h3&gt;
+&lt;p&gt;The only way to access static member data is using static member function.Besides, there is no &lt;strong&gt;this&lt;/strong&gt; pointer in static member function.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-c++&#34; data-lang=&#34;c++&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;complex c1;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;complex &lt;span style=&#34;color:#a6e22e&#34;&gt;c2&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cout &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; c1.real();
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cout &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; c2.imag();
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;---&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;this&lt;/span&gt; pointer.
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cout &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; Complex&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;real(&lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&lt;/span&gt;c1);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cout &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; Complex&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;imag(&lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&lt;/span&gt;c2);
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The member function only has one slice, it needs different address of object to access data.
+&lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:1313/c_plus_plus/images/6_static_object.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Example using static:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>5-new-delete-basic-object-oriented-cpp</title>
+      <link>http://localhost:1313/posts/c&#43;&#43;_basic/5_new_delete/</link>
+      <pubDate>Sun, 30 Mar 2025 11:28:00 +0800</pubDate>
+      <guid>http://localhost:1313/posts/c&#43;&#43;_basic/5_new_delete/</guid>
+      <description>&lt;h2 id=&#34;stack-and-heap&#34;&gt;stack and heap&lt;/h2&gt;
+&lt;p&gt;stack memory is used for local object, local var, argument passed, return val.
+heap memory is dynamically allocated using new, this memory is managed by OS.&lt;/p&gt;
+&lt;h3 id=&#34;life-span&#34;&gt;life span&lt;/h3&gt;
+&lt;h4 id=&#34;heap-object&#34;&gt;heap object&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-c++&#34; data-lang=&#34;c++&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  complex &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;p &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; complex(&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;when the program goes out of the scope, the object pointed by p is still alive but we can&amp;rsquo;t access because the p is local var. In this case, it will cause memory leak , so we need to release when not use it anymore.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>4-big-three-object-oriented-cpp</title>
+      <link>http://localhost:1313/posts/c&#43;&#43;_basic/4_big_three/</link>
+      <pubDate>Sun, 30 Mar 2025 11:15:00 +0800</pubDate>
+      <guid>http://localhost:1313/posts/c&#43;&#43;_basic/4_big_three/</guid>
+      <description>&lt;h2 id=&#34;big-three&#34;&gt;Big three&lt;/h2&gt;
+&lt;p&gt;why we need big there, and what conditions do we need big three?
+The class contains pointer must include these three functions.
+Note: if we don&amp;rsquo;t write copy ctor ,copy op= and dtor, the compiler will generate automatically.
+For copy ctor it will copy bit by bit directly.
+For dtor it will do nothing.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;copy ctor&lt;/li&gt;
+&lt;li&gt;copy op= (copy assignment function)&lt;/li&gt;
+&lt;li&gt;dtor (destructor function)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;String Class with pointer.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>3-operator-overload-object-oriented-cpp</title>
+      <link>http://localhost:1313/posts/c&#43;&#43;_basic/3_operator_overload_typeobject/</link>
+      <pubDate>Sun, 30 Mar 2025 11:06:00 +0800</pubDate>
+      <guid>http://localhost:1313/posts/c&#43;&#43;_basic/3_operator_overload_typeobject/</guid>
+      <description>&lt;h2 id=&#34;operator-overload&#34;&gt;operator overload&lt;/h2&gt;
+&lt;h3 id=&#34;member-function&#34;&gt;member function&lt;/h3&gt;
+&lt;p&gt;the member function overload contains this pointer implicitly, but you don&amp;rsquo;t have to pass the argument. you can use it freely.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-c++&#34; data-lang=&#34;c++&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;inline&lt;/span&gt; complex&lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;__doapl(complex&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; ths, &lt;span style=&#34;color:#66d9ef&#34;&gt;const&lt;/span&gt; complex&lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&lt;/span&gt; r)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  ths&lt;span style=&#34;color:#f92672&#34;&gt;-&amp;gt;&lt;/span&gt;re &lt;span style=&#34;color:#f92672&#34;&gt;+=&lt;/span&gt; r.re;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  ths&lt;span style=&#34;color:#f92672&#34;&gt;-&amp;gt;&lt;/span&gt;im &lt;span style=&#34;color:#f92672&#34;&gt;+=&lt;/span&gt; r.im;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;ths;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;inline&lt;/span&gt; complex&lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;complex&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;operator&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+=&lt;/span&gt; (&lt;span style=&#34;color:#66d9ef&#34;&gt;const&lt;/span&gt; complex&lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&lt;/span&gt; r)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;__doapl&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;this&lt;/span&gt;, r);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;//...
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;complex &lt;span style=&#34;color:#a6e22e&#34;&gt;c1&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;complex &lt;span style=&#34;color:#a6e22e&#34;&gt;c2&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;5&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;c2 &lt;span style=&#34;color:#f92672&#34;&gt;+=&lt;/span&gt; c1;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;c3 &lt;span style=&#34;color:#f92672&#34;&gt;+=&lt;/span&gt; c2 &lt;span style=&#34;color:#f92672&#34;&gt;+=&lt;/span&gt; c1;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;why we need return by reference when we define &lt;strong&gt;+=&lt;/strong&gt; overload function? If you just use c2 += c1; you can define void return type, but when there is a consecutive assignment which means the expression must return a type that can be passed to another +=. So &lt;strong&gt;complex &amp;amp;&lt;/strong&gt; matters. &lt;strong&gt;c3 += c2 += c1&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>2-pass-return-object-oriented-cpp</title>
+      <link>http://localhost:1313/posts/c&#43;&#43;_basic/2_pass_and_return/</link>
+      <pubDate>Sun, 30 Mar 2025 10:48:00 +0800</pubDate>
+      <guid>http://localhost:1313/posts/c&#43;&#43;_basic/2_pass_and_return/</guid>
+      <description>&lt;h2 id=&#34;argument-pass&#34;&gt;argument pass&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;pass by value&lt;/li&gt;
+&lt;li&gt;pass by reference (to const)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Advice: all arguments passed by reference, if it&amp;rsquo;s not changed inside the function add &lt;strong&gt;const&lt;/strong&gt; identifier.
+Besides, in reality, the reference is a pointer.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-c++&#34; data-lang=&#34;c++&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;complex&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  complex (&lt;span style=&#34;color:#66d9ef&#34;&gt;double&lt;/span&gt; r&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#66d9ef&#34;&gt;double&lt;/span&gt; i&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; re(r), im(i)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    {}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  complex&lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;operator&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;+=&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;const&lt;/span&gt; complex&lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#66d9ef&#34;&gt;double&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;real&lt;/span&gt;() &lt;span style=&#34;color:#66d9ef&#34;&gt;const&lt;/span&gt;{&lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; re;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#66d9ef&#34;&gt;double&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;imag&lt;/span&gt;() &lt;span style=&#34;color:#66d9ef&#34;&gt;const&lt;/span&gt;{&lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; im;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;private&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#66d9ef&#34;&gt;double&lt;/span&gt; re, im;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#66d9ef&#34;&gt;friend&lt;/span&gt; complex&lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&lt;/span&gt; __doapl (complex&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;, &lt;span style=&#34;color:#66d9ef&#34;&gt;const&lt;/span&gt; complex&lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ostream&lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;operator&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; (ostream&lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&lt;/span&gt; os, &lt;span style=&#34;color:#66d9ef&#34;&gt;const&lt;/span&gt; complex&lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&lt;/span&gt; x)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; os &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;(&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; real(x) &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;,&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; imag(x) &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;)&amp;#39;&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;//...
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;complex &lt;span style=&#34;color:#a6e22e&#34;&gt;c1&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;complex c2;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cout &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; c1;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cout &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; c2 &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; c1;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;return-value&#34;&gt;return value&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;return value&lt;/li&gt;
+&lt;li&gt;return reference&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Advice: all return value are set reference, if some cases happen that it&amp;rsquo;s not allowed to return reference then return value.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>1-basic-ctor-object-oriented-cpp</title>
       <link>http://localhost:1313/posts/c&#43;&#43;_basic/1_ctor/</link>

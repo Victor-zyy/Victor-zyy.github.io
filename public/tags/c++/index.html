@@ -144,101 +144,155 @@
 
 <article class="post-entry tag-entry"> 
   <header class="entry-header">
-    <h2 class="entry-hint-parent">1-basic-ctor-object-oriented-cpp
+    <h2 class="entry-hint-parent">6-new-delete-object-model-cpp
     </h2>
   </header>
   <div class="entry-content">
-    <p>C-plus-plus profile object object based -class without pointer members -Complex -class with pointer members -String object oriented -inheritance -composition -delegation data and functions C type[data] [functions]—————-&gt;variable in memory C&#43;&#43; class/struct [data, functions]——&gt;object in memory Note: the function of class only has one copy which means when you create class only data occupies memory and vptr (if has virtual function inside class).
-C-plus-plus coding program .h/.cpp/.hpp never mind
-gurad declaration #progam once // #ifndef __COMPLEX__ #define __COMPLEX__ #endif Header Layout class-delcaration class complex { } class-definition complex::function ... ... forward-declarations class complex; template complex not only double real and image, maybe float or int
+    <p>operator new/delete introduction In the last sections, we’ve already talked about new and delete. new expression is divided three parts
+allocate memory using operator new static_cast ctor and the delete expression is divided two parts
+dtor operator delete to release memory However, expression is not allowed to override, but operator new and operator delete are allowed to override inside class or outside class(global).
+override ::operator new/::delete/::new[]/::delete[] here is an example to override the global operator new/delete function
 ...</p>
   </div>
-  <footer class="entry-footer"><span title='2025-03-30 10:09:00 +0800 CST'>March 30, 2025</span>&nbsp;·&nbsp;4 min&nbsp;·&nbsp;737 words&nbsp;·&nbsp;zyy</footer>
-  <a class="entry-link" aria-label="post link to 1-basic-ctor-object-oriented-cpp" href="http://localhost:1313/posts/c&#43;&#43;_basic/1_ctor/"></a>
+  <footer class="entry-footer"><span title='2025-03-30 14:28:00 +0800 CST'>March 30, 2025</span>&nbsp;·&nbsp;6 min&nbsp;·&nbsp;1098 words&nbsp;·&nbsp;zyy</footer>
+  <a class="entry-link" aria-label="post link to 6-new-delete-object-model-cpp" href="http://localhost:1313/posts/c&#43;&#43;_basic/6_new_delete/"></a>
 </article>
 
 <article class="post-entry tag-entry"> 
   <header class="entry-header">
-    <h2 class="entry-hint-parent">cs144-lab5
+    <h2 class="entry-hint-parent">5-vptr-vbtl-object-model-cpp
     </h2>
   </header>
   <div class="entry-content">
-    <p>Object In this lab5, I am gonna to implent an IP interface for TCP/IP stack and IP router later in lab6. The IP interface is used to send etherframe using payload from IP layer. So, in this layer, we handle the mac etherframe in details. If we don’t konw the mac address of the next-hop IP address, we need to send ARP request to this subnet, then queuing the datagram until the ARP message received. After receiving the ARP message, we need to doc the &lt;next-hop, mac&gt; pair mapping for 30 secs in this lab, with this mapping, the next time sending to the same ip would not send ARP message again.
+    <p>vptr and vtbl outline Let’s use an example to illustrate the c&#43;&#43; object model (aka vptr and vbtl).
+class A{ public: virtual void vfunc1(); virtual void vfunc2(); void func1(); void func2(); private: int m_data1, m_data2; } class B: public A{ public: virtual void vfunc1(); void func2(); private: int m_data3; } class C: public B{ public: virtual void vfunc1(); void func1(); private: int m_data1, m_data4; } If we create an object, the sizeof the object is member data variable. But if the class has at least one virtual function it will add another variable called vptr in object. In this example above, the inheritance of class and memory is shown below. In each class B and class C, all override the virtual function 1, so each one is really different in memory. But B and C inherit from A, so all objects of B and C have vbtl entry pointing to A::func2. The picture shown above is really clear to see that. The vptr in another side means that inheritance not only inherits data but also inherits access of function calls.
 ...</p>
   </div>
-  <footer class="entry-footer"><span title='2025-03-26 19:59:00 +0800 CST'>March 26, 2025</span>&nbsp;·&nbsp;4 min&nbsp;·&nbsp;810 words&nbsp;·&nbsp;zyy</footer>
-  <a class="entry-link" aria-label="post link to cs144-lab5" href="http://localhost:1313/posts/cs144/lab5/"></a>
+  <footer class="entry-footer"><span title='2025-03-30 14:27:00 +0800 CST'>March 30, 2025</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;422 words&nbsp;·&nbsp;zyy</footer>
+  <a class="entry-link" aria-label="post link to 5-vptr-vbtl-object-model-cpp" href="http://localhost:1313/posts/c&#43;&#43;_basic/5_object_model_virtual/"></a>
 </article>
 
 <article class="post-entry tag-entry"> 
   <header class="entry-header">
-    <h2 class="entry-hint-parent">cs144-lab4
+    <h2 class="entry-hint-parent">4-syntactic-sugar-object-model-cpp
     </h2>
   </header>
   <div class="entry-content">
-    <p>Glue of CS144TCPSocket I will illustrate the glue for using CS144TCPSocket in one image. From the picture, we know that it’s our job to implement TCP/IP in user layer in this class. But how do our packets of network send to other computers through the internet ? The answer is to use tun/tap device under the linux kernel. The tun/tap device is kinda like a software net-card which tun device gives you raw IP packet and tap device gives you raw MAC dataframe. And follow the instructions of the tun.sh, setting the iptables to route makes our packet to go elsewhere.
+    <p>auto (since c&#43;&#43; 11) Using this keyword in c&#43;&#43; since c11, the compiler can deduce in the compilling time. If the typename is too long to write you can use it and let compiler to deduce.
+list&lt;string&gt; c; list&lt;string&gt;::iterator ite; ite = find(c.begin(), c.end(), target); auto ite = find(c.begin(), c.end(), target); range-base for( since c&#43;&#43;11) In normal c&#43;&#43;, we can use for-loop of type iterator or container.size to iterate the container. In c&#43;&#43;11, it provides us a new for-loop.
 ...</p>
   </div>
-  <footer class="entry-footer"><span title='2025-03-23 15:25:00 +0800 CST'>March 23, 2025</span>&nbsp;·&nbsp;5 min&nbsp;·&nbsp;936 words&nbsp;·&nbsp;zyy</footer>
-  <a class="entry-link" aria-label="post link to cs144-lab4" href="http://localhost:1313/posts/cs144/lab4/"></a>
+  <footer class="entry-footer"><span title='2025-03-30 14:26:00 +0800 CST'>March 30, 2025</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;323 words&nbsp;·&nbsp;zyy</footer>
+  <a class="entry-link" aria-label="post link to 4-syntactic-sugar-object-model-cpp" href="http://localhost:1313/posts/c&#43;&#43;_basic/4_syntactic_sugar/"></a>
 </article>
 
 <article class="post-entry tag-entry"> 
   <header class="entry-header">
-    <h2 class="entry-hint-parent">cs144-lab3
+    <h2 class="entry-hint-parent">3-template-object-model-cpp
     </h2>
   </header>
   <div class="entry-content">
-    <p>TCP Sender Class TCP Sender Responsibility,
-• Keep track of the receiver’s window (receiving incoming TCPReceiverMessages with their acknos and window sizes) • Fill the window when possible, by reading from the ByteStream, creating new TCP segments (including SYN and FIN flags if needed), and sending them. The sender should keep sending segments until either the window is full or the outbound ByteStream has nothing more to send. while loop • Keep track of which segments have been sent but not yet acknowledged by the receiver— we call these “outstanding” segments . outstanding segments • Re-send outstanding segments if enough time passes since they were sent, and they haven’t been acknowledged yet. timer class design
+    <p>Template The template will be compiled successfully, but when called by user, it will be compiled again which might cause error. And the most important thing is operator overload function.
+template class template&lt;typename T&gt; class complex { private: T re, ra; } .... complex&lt;int&gt; c1; complex&lt;double&gt; c1; When the compiler sees the Complex&lt;int&gt; or Complex&lt;double&gt; it will generate two slices of Complex has different type. This is kind of wasteful of memory but it’s necessary.
 ...</p>
   </div>
-  <footer class="entry-footer"><span title='2025-03-22 20:17:00 +0800 CST'>March 22, 2025</span>&nbsp;·&nbsp;4 min&nbsp;·&nbsp;653 words&nbsp;·&nbsp;zyy</footer>
-  <a class="entry-link" aria-label="post link to cs144-lab3" href="http://localhost:1313/posts/cs144/lab3/"></a>
+  <footer class="entry-footer"><span title='2025-03-30 14:05:00 +0800 CST'>March 30, 2025</span>&nbsp;·&nbsp;5 min&nbsp;·&nbsp;1024 words&nbsp;·&nbsp;zyy</footer>
+  <a class="entry-link" aria-label="post link to 3-template-object-model-cpp" href="http://localhost:1313/posts/c&#43;&#43;_basic/3_template/"></a>
 </article>
 
 <article class="post-entry tag-entry"> 
   <header class="entry-header">
-    <h2 class="entry-hint-parent">cs144-lab2
+    <h2 class="entry-hint-parent">2-special-class-object-model-cpp
     </h2>
   </header>
   <div class="entry-content">
-    <p>Outline of TCPreceiver From the lab0, and lab1 we have implemented the ByteStream and Reassembler, in this lab2, I am gonna implement TCPreceiver.
-First of all, we have to illustrate , in TCP (transmition control protocol), there may be many cases of the packets sent by the tcp peer of sender(versus the contrary). For example, there may be lost, altered, reordered, duplicated. And the TCP protocol was designed to handle these cases , so did I.
+    <p>pointer-like classes we say pointer like classes are smart pointers. overload operator* and operator-&gt; function
+simple in class template&lt;class T&gt; class shared_ptr { public: T&amp; operator*() const { return *px; } T* operator-&gt;() const { return px; } shared_ptr(T* p) : px(p) {} private: T* px; long *pn; }; //usage example struct Foo { ... void method(void) { ... } }; shared_ptr&lt;Foo&gt; sp(new Foo); Foo f(*sp); sp-&gt;method(); px-&gt;method(); I am gonna to clarify that sp-&gt;method, the sp-&gt; will call the operator-&gt; function, it will return the px pointer but why it will call method function. Note: remember that -&gt; will never disappear when called the operator-&gt; function.
 ...</p>
   </div>
-  <footer class="entry-footer"><span title='2025-03-22 20:11:00 +0800 CST'>March 22, 2025</span>&nbsp;·&nbsp;7 min&nbsp;·&nbsp;1279 words&nbsp;·&nbsp;zyy</footer>
-  <a class="entry-link" aria-label="post link to cs144-lab2" href="http://localhost:1313/posts/cs144/lab2/"></a>
+  <footer class="entry-footer"><span title='2025-03-30 13:55:00 +0800 CST'>March 30, 2025</span>&nbsp;·&nbsp;4 min&nbsp;·&nbsp;641 words&nbsp;·&nbsp;zyy</footer>
+  <a class="entry-link" aria-label="post link to 2-special-class-object-model-cpp" href="http://localhost:1313/posts/c&#43;&#43;_basic/2_special_classes/"></a>
 </article>
 
 <article class="post-entry tag-entry"> 
   <header class="entry-header">
-    <h2 class="entry-hint-parent">cs144-lab1
+    <h2 class="entry-hint-parent">1-explicit-typefunction-object-model-cpp
     </h2>
   </header>
   <div class="entry-content">
-    <p>Overview Course Learn operations idempotency meaning:
-Idempotency is a property of certain operations or API requests that ensures performing the operation multiple times yields the same result as if it were executed only once. (GET PUT) And the result we expect is result form not result value.
-A non-idempotent operation, on the other hand, changes the state with each execution, meaning that subsequent calls with the same input can yield different results. This is crucial to recognize because it can lead to unintended side effects when such operations are repeated. (POST)
+    <p>conversion function form: operator typename()
+class Fraction { public: Fraction(int num, int den=1) : m_numerator(num), m_denominator(den) {} operator double() const{ return (double) (m_numerator / m_denominator); } private: int m_numerator; //fenzi int m_denominator;// fenmu }; Fraction f(3,5); double d = 4 &#43; f; The conversion function is aimed to let compiler know. When the compiler tries to compile the line double d = 4 &#43; f; it will see if operator &#43; (double, Fraction) is defined, or whether f is able to convert to double. Finally, the compiler will try the latter one, convert f to double use the operator double() function in Fraction. Actually you can write many conversion function as long as they are meaningful to the user.
 ...</p>
   </div>
-  <footer class="entry-footer"><span title='2025-03-22 19:59:00 +0800 CST'>March 22, 2025</span>&nbsp;·&nbsp;6 min&nbsp;·&nbsp;1165 words&nbsp;·&nbsp;zyy</footer>
-  <a class="entry-link" aria-label="post link to cs144-lab1" href="http://localhost:1313/posts/cs144/lab1/"></a>
+  <footer class="entry-footer"><span title='2025-03-30 13:44:00 +0800 CST'>March 30, 2025</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;600 words&nbsp;·&nbsp;zyy</footer>
+  <a class="entry-link" aria-label="post link to 1-explicit-typefunction-object-model-cpp" href="http://localhost:1313/posts/c&#43;&#43;_basic/1_explicit_typefunction/"></a>
 </article>
 
 <article class="post-entry tag-entry"> 
   <header class="entry-header">
-    <h2 class="entry-hint-parent">cs144-lab0
+    <h2 class="entry-hint-parent">8-virtual-polymorphism-basic-object-oriented-cpp
     </h2>
   </header>
   <div class="entry-content">
-    <p>1 Set up Linux environment ubuntu 22.04 g&#43;&#43; 11.4 packages required $ sudo apt update &amp;&amp; sudo apt install git cmake gdb build-essential clang \ clang-tidy clang-format gcc-doc pkg-config glibc-doc tcpdump tshark 2 Networking by hand networking abstraction —reliable bidirectional byte stream
-2.1 Fetch a Web Page steps web server address using telnet telnet cs144.keithw.org http to open a reliable byte stream between two computers. First, Type GET /hello HTTP/1.1 `Enter` the Enter is very important Second, Type Host: cs144.keithw.org `Enter` Third, Type Connection: close `Enter`` Finally, Type `Enter` explanation ——– http://host/path
+    <p>inheritance with virtual function virtual function The inheritance with virtual function can make the most of it. The member function has three forms classified by virtual. And the virtual function needs to be overriden by derived class.
+non-virtual function (with no virtual identifier) impure virtual function (with virtual identifier and default definition) pure virtual (with virtual identifier, = 0) // fixme Sometimes we need a default virtual function definition so impure is necessary.
 ...</p>
   </div>
-  <footer class="entry-footer"><span title='2025-03-21 15:58:00 +0800 CST'>March 21, 2025</span>&nbsp;·&nbsp;7 min&nbsp;·&nbsp;1485 words&nbsp;·&nbsp;zyy</footer>
-  <a class="entry-link" aria-label="post link to cs144-lab0" href="http://localhost:1313/posts/cs144/lab0/"></a>
+  <footer class="entry-footer"><span title='2025-03-30 11:58:00 +0800 CST'>March 30, 2025</span>&nbsp;·&nbsp;5 min&nbsp;·&nbsp;873 words&nbsp;·&nbsp;zyy</footer>
+  <a class="entry-link" aria-label="post link to 8-virtual-polymorphism-basic-object-oriented-cpp" href="http://localhost:1313/posts/c&#43;&#43;_basic/8_virtual_polymorphism/"></a>
 </article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">7-oop-ood-object-oriented-cpp
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>OOP and OOD object oriented programming, object oriented design We have three tools to design a good program, inheritance, composition, and delegation.
+Inheritance is-a The public inheritance way is “is-a”, like person is a creature. dog is a animal. etc.
+outline The same outline as composition.
+ctor and dtor The order of calling ctor when construct the class is from inner to outter, the dtor is the opposite.
+Derived::Derived(...) : Base() {}; Derived::~Derived(...) : {... ~Base();}; Besides, the compiler will automatically add the ctor and dtor, if ctor does ease your tastes then you need to change you like. Note: the base dtor must using virtual identifier, otherwise it will cause undefined behavior.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-03-30 11:48:00 +0800 CST'>March 30, 2025</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;376 words&nbsp;·&nbsp;zyy</footer>
+  <a class="entry-link" aria-label="post link to 7-oop-ood-object-oriented-cpp" href="http://localhost:1313/posts/c&#43;&#43;_basic/7_oop_ood/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">6-complement-objcet-oriented-cpp
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>static static member data only has one slice in memory, and need to be definition.
+static member function The only way to access static member data is using static member function.Besides, there is no this pointer in static member function.
+complex c1; complex c2(2,1); cout &lt;&lt; c1.real(); cout &lt;&lt; c2.imag(); ---&gt;this pointer. cout &lt;&lt; Complex::real(&amp;c1); cout &lt;&lt; Complex::imag(&amp;c2); The member function only has one slice, it needs different address of object to access data. Example using static:
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-03-30 11:41:00 +0800 CST'>March 30, 2025</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;533 words&nbsp;·&nbsp;zyy</footer>
+  <a class="entry-link" aria-label="post link to 6-complement-objcet-oriented-cpp" href="http://localhost:1313/posts/c&#43;&#43;_basic/6_complement/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">5-new-delete-basic-object-oriented-cpp
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>stack and heap stack memory is used for local object, local var, argument passed, return val. heap memory is dynamically allocated using new, this memory is managed by OS.
+life span heap object { complex *p = new complex(2,1); } when the program goes out of the scope, the object pointed by p is still alive but we can’t access because the p is local var. In this case, it will cause memory leak , so we need to release when not use it anymore.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-03-30 11:28:00 +0800 CST'>March 30, 2025</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;412 words&nbsp;·&nbsp;zyy</footer>
+  <a class="entry-link" aria-label="post link to 5-new-delete-basic-object-oriented-cpp" href="http://localhost:1313/posts/c&#43;&#43;_basic/5_new_delete/"></a>
+</article>
+<footer class="page-footer">
+  <nav class="pagination">
+    <a class="next" href="http://localhost:1313/tags/c&#43;&#43;/page/2/">Next&nbsp;&nbsp;»
+    </a>
+  </nav>
+</footer>
     </main>
     
 <footer class="footer">

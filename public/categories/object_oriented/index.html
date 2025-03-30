@@ -144,6 +144,108 @@
 
 <article class="post-entry tag-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">8-virtual-polymorphism-basic-object-oriented-cpp
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>inheritance with virtual function virtual function The inheritance with virtual function can make the most of it. The member function has three forms classified by virtual. And the virtual function needs to be overriden by derived class.
+non-virtual function (with no virtual identifier) impure virtual function (with virtual identifier and default definition) pure virtual (with virtual identifier, = 0) // fixme Sometimes we need a default virtual function definition so impure is necessary.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-03-30 11:58:00 +0800 CST'>March 30, 2025</span>&nbsp;·&nbsp;5 min&nbsp;·&nbsp;873 words&nbsp;·&nbsp;zyy</footer>
+  <a class="entry-link" aria-label="post link to 8-virtual-polymorphism-basic-object-oriented-cpp" href="http://localhost:1313/posts/c&#43;&#43;_basic/8_virtual_polymorphism/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">7-oop-ood-object-oriented-cpp
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>OOP and OOD object oriented programming, object oriented design We have three tools to design a good program, inheritance, composition, and delegation.
+Inheritance is-a The public inheritance way is “is-a”, like person is a creature. dog is a animal. etc.
+outline The same outline as composition.
+ctor and dtor The order of calling ctor when construct the class is from inner to outter, the dtor is the opposite.
+Derived::Derived(...) : Base() {}; Derived::~Derived(...) : {... ~Base();}; Besides, the compiler will automatically add the ctor and dtor, if ctor does ease your tastes then you need to change you like. Note: the base dtor must using virtual identifier, otherwise it will cause undefined behavior.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-03-30 11:48:00 +0800 CST'>March 30, 2025</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;376 words&nbsp;·&nbsp;zyy</footer>
+  <a class="entry-link" aria-label="post link to 7-oop-ood-object-oriented-cpp" href="http://localhost:1313/posts/c&#43;&#43;_basic/7_oop_ood/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">6-complement-objcet-oriented-cpp
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>static static member data only has one slice in memory, and need to be definition.
+static member function The only way to access static member data is using static member function.Besides, there is no this pointer in static member function.
+complex c1; complex c2(2,1); cout &lt;&lt; c1.real(); cout &lt;&lt; c2.imag(); ---&gt;this pointer. cout &lt;&lt; Complex::real(&amp;c1); cout &lt;&lt; Complex::imag(&amp;c2); The member function only has one slice, it needs different address of object to access data. Example using static:
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-03-30 11:41:00 +0800 CST'>March 30, 2025</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;533 words&nbsp;·&nbsp;zyy</footer>
+  <a class="entry-link" aria-label="post link to 6-complement-objcet-oriented-cpp" href="http://localhost:1313/posts/c&#43;&#43;_basic/6_complement/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">5-new-delete-basic-object-oriented-cpp
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>stack and heap stack memory is used for local object, local var, argument passed, return val. heap memory is dynamically allocated using new, this memory is managed by OS.
+life span heap object { complex *p = new complex(2,1); } when the program goes out of the scope, the object pointed by p is still alive but we can’t access because the p is local var. In this case, it will cause memory leak , so we need to release when not use it anymore.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-03-30 11:28:00 +0800 CST'>March 30, 2025</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;412 words&nbsp;·&nbsp;zyy</footer>
+  <a class="entry-link" aria-label="post link to 5-new-delete-basic-object-oriented-cpp" href="http://localhost:1313/posts/c&#43;&#43;_basic/5_new_delete/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">4-big-three-object-oriented-cpp
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Big three why we need big there, and what conditions do we need big three? The class contains pointer must include these three functions. Note: if we don’t write copy ctor ,copy op= and dtor, the compiler will generate automatically. For copy ctor it will copy bit by bit directly. For dtor it will do nothing.
+copy ctor copy op= (copy assignment function) dtor (destructor function) String Class with pointer.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-03-30 11:15:00 +0800 CST'>March 30, 2025</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;394 words&nbsp;·&nbsp;zyy</footer>
+  <a class="entry-link" aria-label="post link to 4-big-three-object-oriented-cpp" href="http://localhost:1313/posts/c&#43;&#43;_basic/4_big_three/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">3-operator-overload-object-oriented-cpp
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>operator overload member function the member function overload contains this pointer implicitly, but you don’t have to pass the argument. you can use it freely.
+inline complex&amp; __doapl(complex* ths, const complex&amp; r) { ths-&gt;re &#43;= r.re; ths-&gt;im &#43;= r.im; return *ths; } inline complex&amp; complex::operator &#43;= (const complex&amp; r) { return __doapl(this, r); } //... complex c1(2,1); complex c2(5); c2 &#43;= c1; c3 &#43;= c2 &#43;= c1; why we need return by reference when we define &#43;= overload function? If you just use c2 &#43;= c1; you can define void return type, but when there is a consecutive assignment which means the expression must return a type that can be passed to another &#43;=. So complex &amp; matters. c3 &#43;= c2 &#43;= c1
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-03-30 11:06:00 +0800 CST'>March 30, 2025</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;395 words&nbsp;·&nbsp;zyy</footer>
+  <a class="entry-link" aria-label="post link to 3-operator-overload-object-oriented-cpp" href="http://localhost:1313/posts/c&#43;&#43;_basic/3_operator_overload_typeobject/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">2-pass-return-object-oriented-cpp
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>argument pass pass by value pass by reference (to const) Advice: all arguments passed by reference, if it’s not changed inside the function add const identifier. Besides, in reality, the reference is a pointer.
+class complex { public: complex (double r= 0, double i= 0) : re(r), im(i) {} complex&amp; operator&#43;=(const complex&amp;); double real() const{return re;} double imag() const{return im;} private: double re, im; friend complex&amp; __doapl (complex*, const complex&amp;); } ostream&amp; operator &lt;&lt; (ostream&amp; os, const complex&amp; x) { return os &lt;&lt; &#39;(&#39; &lt;&lt; real(x) &lt;&lt; &#39;,&#39; &lt;&lt; imag(x) &lt;&lt; &#39;)&#39;; } //... complex c1(2,1); complex c2; cout &lt;&lt; c1; cout &lt;&lt; c2 &lt;&lt; c1; return value return value return reference Advice: all return value are set reference, if some cases happen that it’s not allowed to return reference then return value.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-03-30 10:48:00 +0800 CST'>March 30, 2025</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;424 words&nbsp;·&nbsp;zyy</footer>
+  <a class="entry-link" aria-label="post link to 2-pass-return-object-oriented-cpp" href="http://localhost:1313/posts/c&#43;&#43;_basic/2_pass_and_return/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">1-basic-ctor-object-oriented-cpp
     </h2>
   </header>

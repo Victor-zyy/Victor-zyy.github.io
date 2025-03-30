@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Object_model | My New Hugo Site</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/categories/object_model/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.f49d66caae9ea0fd43f21f29e71a8d3e284517ed770f2aa86fa012953ad3c9ef.css" integrity="sha256-9J1myq6eoP1D8h8p5xqNPihFF&#43;13Dyqob6ASlTrTye8=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/categories/object_model/index.xml">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/categories/object_model/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+</head>
+
+<body class="list" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="Home (Alt + H)">
+                <img src="http://localhost:1313/apple-touch-icon.png" alt="" aria-label="logo"
+                    height="35">Home</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/archives/" title="Archive">
+                    <span>Archive</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/categories/" title="Categories">
+                    <span>Categories</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/search/" title="Search (Alt &#43; /)" accesskey=/>
+                    <span>Search</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://example.org" title="example.org">
+                    <span>example.org</span>&nbsp;
+                    <svg fill="none" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round"
+                        stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" height="12" width="12">
+                        <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path>
+                        <path d="M15 3h6v6"></path>
+                        <path d="M10 14L21 3"></path>
+                    </svg>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main"> 
+<header class="page-header"><div class="breadcrumbs"><a href="http://localhost:1313/">Home</a>&nbsp;»&nbsp;<a href="http://localhost:1313/categories/">Categories</a></div>
+  <h1>
+    Object_model
+  </h1>
+</header>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">6-new-delete-object-model-cpp
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>operator new/delete introduction In the last sections, we’ve already talked about new and delete. new expression is divided three parts
+allocate memory using operator new static_cast ctor and the delete expression is divided two parts
+dtor operator delete to release memory However, expression is not allowed to override, but operator new and operator delete are allowed to override inside class or outside class(global).
+override ::operator new/::delete/::new[]/::delete[] here is an example to override the global operator new/delete function
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-03-30 14:28:00 +0800 CST'>March 30, 2025</span>&nbsp;·&nbsp;6 min&nbsp;·&nbsp;1098 words&nbsp;·&nbsp;zyy</footer>
+  <a class="entry-link" aria-label="post link to 6-new-delete-object-model-cpp" href="http://localhost:1313/posts/c&#43;&#43;_basic/6_new_delete/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">5-vptr-vbtl-object-model-cpp
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>vptr and vtbl outline Let’s use an example to illustrate the c&#43;&#43; object model (aka vptr and vbtl).
+class A{ public: virtual void vfunc1(); virtual void vfunc2(); void func1(); void func2(); private: int m_data1, m_data2; } class B: public A{ public: virtual void vfunc1(); void func2(); private: int m_data3; } class C: public B{ public: virtual void vfunc1(); void func1(); private: int m_data1, m_data4; } If we create an object, the sizeof the object is member data variable. But if the class has at least one virtual function it will add another variable called vptr in object. In this example above, the inheritance of class and memory is shown below. In each class B and class C, all override the virtual function 1, so each one is really different in memory. But B and C inherit from A, so all objects of B and C have vbtl entry pointing to A::func2. The picture shown above is really clear to see that. The vptr in another side means that inheritance not only inherits data but also inherits access of function calls.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-03-30 14:27:00 +0800 CST'>March 30, 2025</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;422 words&nbsp;·&nbsp;zyy</footer>
+  <a class="entry-link" aria-label="post link to 5-vptr-vbtl-object-model-cpp" href="http://localhost:1313/posts/c&#43;&#43;_basic/5_object_model_virtual/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">4-syntactic-sugar-object-model-cpp
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>auto (since c&#43;&#43; 11) Using this keyword in c&#43;&#43; since c11, the compiler can deduce in the compilling time. If the typename is too long to write you can use it and let compiler to deduce.
+list&lt;string&gt; c; list&lt;string&gt;::iterator ite; ite = find(c.begin(), c.end(), target); auto ite = find(c.begin(), c.end(), target); range-base for( since c&#43;&#43;11) In normal c&#43;&#43;, we can use for-loop of type iterator or container.size to iterate the container. In c&#43;&#43;11, it provides us a new for-loop.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-03-30 14:26:00 +0800 CST'>March 30, 2025</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;323 words&nbsp;·&nbsp;zyy</footer>
+  <a class="entry-link" aria-label="post link to 4-syntactic-sugar-object-model-cpp" href="http://localhost:1313/posts/c&#43;&#43;_basic/4_syntactic_sugar/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">3-template-object-model-cpp
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Template The template will be compiled successfully, but when called by user, it will be compiled again which might cause error. And the most important thing is operator overload function.
+template class template&lt;typename T&gt; class complex { private: T re, ra; } .... complex&lt;int&gt; c1; complex&lt;double&gt; c1; When the compiler sees the Complex&lt;int&gt; or Complex&lt;double&gt; it will generate two slices of Complex has different type. This is kind of wasteful of memory but it’s necessary.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-03-30 14:05:00 +0800 CST'>March 30, 2025</span>&nbsp;·&nbsp;5 min&nbsp;·&nbsp;1024 words&nbsp;·&nbsp;zyy</footer>
+  <a class="entry-link" aria-label="post link to 3-template-object-model-cpp" href="http://localhost:1313/posts/c&#43;&#43;_basic/3_template/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">2-special-class-object-model-cpp
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>pointer-like classes we say pointer like classes are smart pointers. overload operator* and operator-&gt; function
+simple in class template&lt;class T&gt; class shared_ptr { public: T&amp; operator*() const { return *px; } T* operator-&gt;() const { return px; } shared_ptr(T* p) : px(p) {} private: T* px; long *pn; }; //usage example struct Foo { ... void method(void) { ... } }; shared_ptr&lt;Foo&gt; sp(new Foo); Foo f(*sp); sp-&gt;method(); px-&gt;method(); I am gonna to clarify that sp-&gt;method, the sp-&gt; will call the operator-&gt; function, it will return the px pointer but why it will call method function. Note: remember that -&gt; will never disappear when called the operator-&gt; function.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-03-30 13:55:00 +0800 CST'>March 30, 2025</span>&nbsp;·&nbsp;4 min&nbsp;·&nbsp;641 words&nbsp;·&nbsp;zyy</footer>
+  <a class="entry-link" aria-label="post link to 2-special-class-object-model-cpp" href="http://localhost:1313/posts/c&#43;&#43;_basic/2_special_classes/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">1-explicit-typefunction-object-model-cpp
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>conversion function form: operator typename()
+class Fraction { public: Fraction(int num, int den=1) : m_numerator(num), m_denominator(den) {} operator double() const{ return (double) (m_numerator / m_denominator); } private: int m_numerator; //fenzi int m_denominator;// fenmu }; Fraction f(3,5); double d = 4 &#43; f; The conversion function is aimed to let compiler know. When the compiler tries to compile the line double d = 4 &#43; f; it will see if operator &#43; (double, Fraction) is defined, or whether f is able to convert to double. Finally, the compiler will try the latter one, convert f to double use the operator double() function in Fraction. Actually you can write many conversion function as long as they are meaningful to the user.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-03-30 13:44:00 +0800 CST'>March 30, 2025</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;600 words&nbsp;·&nbsp;zyy</footer>
+  <a class="entry-link" aria-label="post link to 1-explicit-typefunction-object-model-cpp" href="http://localhost:1313/posts/c&#43;&#43;_basic/1_explicit_typefunction/"></a>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="http://localhost:1313/">My New Hugo Site</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
