@@ -6,8 +6,29 @@
     <description>Recent content in Net on My New Hugo Site</description>
     <generator>Hugo -- 0.145.0</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 26 Mar 2025 19:59:00 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 30 Mar 2025 17:10:00 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/categories/net/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>cs144-lab7</title>
+      <link>http://localhost:1313/posts/cs144/lab7/</link>
+      <pubDate>Sun, 30 Mar 2025 17:10:00 +0800</pubDate>
+      <guid>http://localhost:1313/posts/cs144/lab7/</guid>
+      <description>&lt;h2 id=&#34;object&#34;&gt;Object&lt;/h2&gt;
+&lt;p&gt;The lab7 is the final lab of the cs144 network class, it doesn&amp;rsquo;t need a single line of code to write. But the idea of this whole structure is really nice to follow, and I will do and analyse these structures later on, but today, i give you a short framework of the lab7 and achievements.&lt;/p&gt;
+&lt;h3 id=&#34;outline&#34;&gt;outline&lt;/h3&gt;
+&lt;p&gt;The picture of this doc is nice to illustrate, lab7 uses some code to glues the bottom layer and the details things. It provided us an illusion that we use our components of code to connect and send files.
+&lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:1313/cs144/images/lab7_structure.png&#34;&gt;
+It use cs144.keithw.org as a relay to communicate one with another. Then the host and server are likely to connect without hardware bariiers.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>cs144-lab6</title>
+      <link>http://localhost:1313/posts/cs144/lab6/</link>
+      <pubDate>Sun, 30 Mar 2025 16:25:00 +0800</pubDate>
+      <guid>http://localhost:1313/posts/cs144/lab6/</guid>
+      <description>&lt;h2 id=&#34;router&#34;&gt;Router&lt;/h2&gt;
+&lt;h3 id=&#34;introduction&#34;&gt;introduction&lt;/h3&gt;
+&lt;p&gt;A router lies in IP layer of TCP/IP, when an ip-packet comes to the network interface, the router will route the ip-packet to another router (indirect) or another network(direct). But the router don&amp;rsquo;t route the ip-packet randomly, it follow the routing tables strictly. The routing table is just a mapping for dst-ip and network interface. The router has the ability to drop the message if the ttl of the ip-header equals zero or one.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>cs144-lab5</title>
       <link>http://localhost:1313/posts/cs144/lab5/</link>

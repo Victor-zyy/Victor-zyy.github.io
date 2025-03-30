@@ -144,6 +144,35 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">6-complement-objcet-oriented-cpp
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>static static member data only has one slice in memory, and need to be definition.
+static member function The only way to access static member data is using static member function.Besides, there is no this pointer in static member function.
+complex c1; complex c2(2,1); cout &lt;&lt; c1.real(); cout &lt;&lt; c2.imag(); ---&gt;this pointer. cout &lt;&lt; Complex::real(&amp;c1); cout &lt;&lt; Complex::imag(&amp;c2); The member function only has one slice, it needs different address of object to access data. Example using static:
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-03-30 11:41:00 +0800 CST'>March 30, 2025</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;533 words&nbsp;·&nbsp;zyy</footer>
+  <a class="entry-link" aria-label="post link to 6-complement-objcet-oriented-cpp" href="http://localhost:1313/posts/c&#43;&#43;_basic/6_complement/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">5-new-delete-basic-object-oriented-cpp
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>stack and heap stack memory is used for local object, local var, argument passed, return val. heap memory is dynamically allocated using new, this memory is managed by OS.
+life span heap object { complex *p = new complex(2,1); } when the program goes out of the scope, the object pointed by p is still alive but we can’t access because the p is local var. In this case, it will cause memory leak , so we need to release when not use it anymore.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-03-30 11:28:00 +0800 CST'>March 30, 2025</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;412 words&nbsp;·&nbsp;zyy</footer>
+  <a class="entry-link" aria-label="post link to 5-new-delete-basic-object-oriented-cpp" href="http://localhost:1313/posts/c&#43;&#43;_basic/5_new_delete/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">4-big-three-object-oriented-cpp
     </h2>
   </header>
@@ -252,39 +281,12 @@ First of all, we have to illustrate , in TCP (transmition control protocol), the
   <footer class="entry-footer"><span title='2025-03-22 20:11:00 +0800 CST'>March 22, 2025</span>&nbsp;·&nbsp;7 min&nbsp;·&nbsp;1279 words&nbsp;·&nbsp;zyy</footer>
   <a class="entry-link" aria-label="post link to cs144-lab2" href="http://localhost:1313/posts/cs144/lab2/"></a>
 </article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">cs144-lab1
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Overview Course Learn operations idempotency meaning:
-Idempotency is a property of certain operations or API requests that ensures performing the operation multiple times yields the same result as if it were executed only once. (GET PUT) And the result we expect is result form not result value.
-A non-idempotent operation, on the other hand, changes the state with each execution, meaning that subsequent calls with the same input can yield different results. This is crucial to recognize because it can lead to unintended side effects when such operations are repeated. (POST)
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-03-22 19:59:00 +0800 CST'>March 22, 2025</span>&nbsp;·&nbsp;6 min&nbsp;·&nbsp;1165 words&nbsp;·&nbsp;zyy</footer>
-  <a class="entry-link" aria-label="post link to cs144-lab1" href="http://localhost:1313/posts/cs144/lab1/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">cs144-lab0
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>1 Set up Linux environment ubuntu 22.04 g&#43;&#43; 11.4 packages required $ sudo apt update &amp;&amp; sudo apt install git cmake gdb build-essential clang \ clang-tidy clang-format gcc-doc pkg-config glibc-doc tcpdump tshark 2 Networking by hand networking abstraction —reliable bidirectional byte stream
-2.1 Fetch a Web Page steps web server address using telnet telnet cs144.keithw.org http to open a reliable byte stream between two computers. First, Type GET /hello HTTP/1.1 `Enter` the Enter is very important Second, Type Host: cs144.keithw.org `Enter` Third, Type Connection: close `Enter`` Finally, Type `Enter` explanation ——– http://host/path
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-03-21 15:58:00 +0800 CST'>March 21, 2025</span>&nbsp;·&nbsp;7 min&nbsp;·&nbsp;1485 words&nbsp;·&nbsp;zyy</footer>
-  <a class="entry-link" aria-label="post link to cs144-lab0" href="http://localhost:1313/posts/cs144/lab0/"></a>
-</article>
 <footer class="page-footer">
   <nav class="pagination">
     <a class="prev" href="http://localhost:1313/posts/">
       «&nbsp;Prev&nbsp;
+    </a>
+    <a class="next" href="http://localhost:1313/posts/page/3/">Next&nbsp;&nbsp;»
     </a>
   </nav>
 </footer>
