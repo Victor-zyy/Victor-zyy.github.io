@@ -5,11 +5,11 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="noindex, nofollow">
-<title>Posts | My New Hugo Site</title>
+<title>Object_oriented | My New Hugo Site</title>
 <meta name="keywords" content="">
-<meta name="description" content="Posts - My New Hugo Site">
+<meta name="description" content="">
 <meta name="author" content="">
-<link rel="canonical" href="http://localhost:1313/posts/">
+<link rel="canonical" href="http://localhost:1313/categories/object_oriented/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.f49d66caae9ea0fd43f21f29e71a8d3e284517ed770f2aa86fa012953ad3c9ef.css" integrity="sha256-9J1myq6eoP1D8h8p5xqNPihFF&#43;13Dyqob6ASlTrTye8=" rel="preload stylesheet" as="style">
 <link rel="icon" href="http://localhost:1313/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
@@ -18,8 +18,8 @@
 <link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/posts/index.xml">
-<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/">
+<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/categories/object_oriented/index.xml">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/categories/object_oriented/">
 <noscript>
     <style>
         #theme-toggle,
@@ -136,13 +136,13 @@
     </nav>
 </header>
 <main class="main"> 
-<header class="page-header"><div class="breadcrumbs"><a href="http://localhost:1313/">Home</a></div>
+<header class="page-header"><div class="breadcrumbs"><a href="http://localhost:1313/">Home</a>&nbsp;»&nbsp;<a href="http://localhost:1313/categories/">Categories</a></div>
   <h1>
-    Posts
+    Object_oriented
   </h1>
 </header>
 
-<article class="post-entry"> 
+<article class="post-entry tag-entry"> 
   <header class="entry-header">
     <h2 class="entry-hint-parent">1-basic-ctor-object-oriented-cpp
     </h2>
@@ -155,89 +155,6 @@ gurad declaration #progam once // #ifndef __COMPLEX__ #define __COMPLEX__ #endif
   </div>
   <footer class="entry-footer"><span title='2025-03-30 10:09:00 +0800 CST'>March 30, 2025</span>&nbsp;·&nbsp;4 min&nbsp;·&nbsp;737 words&nbsp;·&nbsp;zyy</footer>
   <a class="entry-link" aria-label="post link to 1-basic-ctor-object-oriented-cpp" href="http://localhost:1313/posts/c&#43;&#43;_basic/1_ctor/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">cs144-lab5
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Object In this lab5, I am gonna to implent an IP interface for TCP/IP stack and IP router later in lab6. The IP interface is used to send etherframe using payload from IP layer. So, in this layer, we handle the mac etherframe in details. If we don’t konw the mac address of the next-hop IP address, we need to send ARP request to this subnet, then queuing the datagram until the ARP message received. After receiving the ARP message, we need to doc the &lt;next-hop, mac&gt; pair mapping for 30 secs in this lab, with this mapping, the next time sending to the same ip would not send ARP message again.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-03-26 19:59:00 +0800 CST'>March 26, 2025</span>&nbsp;·&nbsp;4 min&nbsp;·&nbsp;810 words&nbsp;·&nbsp;zyy</footer>
-  <a class="entry-link" aria-label="post link to cs144-lab5" href="http://localhost:1313/posts/cs144/lab5/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">cs144-lab4
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Glue of CS144TCPSocket I will illustrate the glue for using CS144TCPSocket in one image. From the picture, we know that it’s our job to implement TCP/IP in user layer in this class. But how do our packets of network send to other computers through the internet ? The answer is to use tun/tap device under the linux kernel. The tun/tap device is kinda like a software net-card which tun device gives you raw IP packet and tap device gives you raw MAC dataframe. And follow the instructions of the tun.sh, setting the iptables to route makes our packet to go elsewhere.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-03-23 15:25:00 +0800 CST'>March 23, 2025</span>&nbsp;·&nbsp;5 min&nbsp;·&nbsp;936 words&nbsp;·&nbsp;zyy</footer>
-  <a class="entry-link" aria-label="post link to cs144-lab4" href="http://localhost:1313/posts/cs144/lab4/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">cs144-lab3
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>TCP Sender Class TCP Sender Responsibility,
-• Keep track of the receiver’s window (receiving incoming TCPReceiverMessages with their acknos and window sizes) • Fill the window when possible, by reading from the ByteStream, creating new TCP segments (including SYN and FIN flags if needed), and sending them. The sender should keep sending segments until either the window is full or the outbound ByteStream has nothing more to send. while loop • Keep track of which segments have been sent but not yet acknowledged by the receiver— we call these “outstanding” segments . outstanding segments • Re-send outstanding segments if enough time passes since they were sent, and they haven’t been acknowledged yet. timer class design
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-03-22 20:17:00 +0800 CST'>March 22, 2025</span>&nbsp;·&nbsp;4 min&nbsp;·&nbsp;653 words&nbsp;·&nbsp;zyy</footer>
-  <a class="entry-link" aria-label="post link to cs144-lab3" href="http://localhost:1313/posts/cs144/lab3/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">cs144-lab2
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Outline of TCPreceiver From the lab0, and lab1 we have implemented the ByteStream and Reassembler, in this lab2, I am gonna implement TCPreceiver.
-First of all, we have to illustrate , in TCP (transmition control protocol), there may be many cases of the packets sent by the tcp peer of sender(versus the contrary). For example, there may be lost, altered, reordered, duplicated. And the TCP protocol was designed to handle these cases , so did I.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-03-22 20:11:00 +0800 CST'>March 22, 2025</span>&nbsp;·&nbsp;7 min&nbsp;·&nbsp;1279 words&nbsp;·&nbsp;zyy</footer>
-  <a class="entry-link" aria-label="post link to cs144-lab2" href="http://localhost:1313/posts/cs144/lab2/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">cs144-lab1
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Overview Course Learn operations idempotency meaning:
-Idempotency is a property of certain operations or API requests that ensures performing the operation multiple times yields the same result as if it were executed only once. (GET PUT) And the result we expect is result form not result value.
-A non-idempotent operation, on the other hand, changes the state with each execution, meaning that subsequent calls with the same input can yield different results. This is crucial to recognize because it can lead to unintended side effects when such operations are repeated. (POST)
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-03-22 19:59:00 +0800 CST'>March 22, 2025</span>&nbsp;·&nbsp;6 min&nbsp;·&nbsp;1165 words&nbsp;·&nbsp;zyy</footer>
-  <a class="entry-link" aria-label="post link to cs144-lab1" href="http://localhost:1313/posts/cs144/lab1/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">cs144-lab0
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>1 Set up Linux environment ubuntu 22.04 g&#43;&#43; 11.4 packages required $ sudo apt update &amp;&amp; sudo apt install git cmake gdb build-essential clang \ clang-tidy clang-format gcc-doc pkg-config glibc-doc tcpdump tshark 2 Networking by hand networking abstraction —reliable bidirectional byte stream
-2.1 Fetch a Web Page steps web server address using telnet telnet cs144.keithw.org http to open a reliable byte stream between two computers. First, Type GET /hello HTTP/1.1 `Enter` the Enter is very important Second, Type Host: cs144.keithw.org `Enter` Third, Type Connection: close `Enter`` Finally, Type `Enter` explanation ——– http://host/path
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-03-21 15:58:00 +0800 CST'>March 21, 2025</span>&nbsp;·&nbsp;7 min&nbsp;·&nbsp;1485 words&nbsp;·&nbsp;zyy</footer>
-  <a class="entry-link" aria-label="post link to cs144-lab0" href="http://localhost:1313/posts/cs144/lab0/"></a>
 </article>
     </main>
     

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Language on My New Hugo Site</title>
+    <link>http://localhost:1313/tags/language/</link>
+    <description>Recent content in Language on My New Hugo Site</description>
+    <generator>Hugo -- 0.145.0</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 30 Mar 2025 10:09:00 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/language/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>1-basic-ctor-object-oriented-cpp</title>
+      <link>http://localhost:1313/posts/c&#43;&#43;_basic/1_ctor/</link>
+      <pubDate>Sun, 30 Mar 2025 10:09:00 +0800</pubDate>
+      <guid>http://localhost:1313/posts/c&#43;&#43;_basic/1_ctor/</guid>
+      <description>&lt;h2 id=&#34;c-plus-plus-profile&#34;&gt;C-plus-plus profile&lt;/h2&gt;
+&lt;h3 id=&#34;object&#34;&gt;object&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;object based
+-class without pointer members
+-Complex
+-class with pointer members
+-String&lt;/li&gt;
+&lt;li&gt;object oriented
+-inheritance
+-composition
+-delegation&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;data-and-functions&#34;&gt;data and functions&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;C type[data] [functions]&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;-&amp;gt;variable in memory&lt;/li&gt;
+&lt;li&gt;C++ class/struct [data, functions]&amp;mdash;&amp;mdash;&amp;gt;object in memory&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Note: the function of class only has one copy which means when you create class only data occupies memory and vptr (if has virtual function inside class).&lt;/p&gt;
+&lt;h3 id=&#34;c-plus-plus-coding-program&#34;&gt;C-plus-plus coding program&lt;/h3&gt;
+&lt;p&gt;.h/.cpp/.hpp never mind&lt;/p&gt;
+&lt;h3 id=&#34;gurad-declaration&#34;&gt;gurad declaration&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-c++&#34; data-lang=&#34;c++&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#progam once
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;//
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#ifndef __COMPLEX__
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#define __COMPLEX__
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#endif
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;header-layout&#34;&gt;Header Layout&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;class-delcaration&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-c++&#34; data-lang=&#34;c++&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;complex&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol&gt;
+&lt;li&gt;class-definition&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-c++&#34; data-lang=&#34;c++&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;complex&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;function ... ...
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol&gt;
+&lt;li&gt;forward-declarations&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-c++&#34; data-lang=&#34;c++&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;complex&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;template&#34;&gt;template&lt;/h3&gt;
+&lt;p&gt;complex not only double real and image, maybe float or int&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
